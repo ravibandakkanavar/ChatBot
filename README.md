@@ -71,6 +71,7 @@ cp .env.example .env
 
 ```env
 OPENAI_API_KEY=your_key_here
+OPENAI_MODEL=gpt-4o-mini
 ```
 
 3. Install dependencies:
@@ -79,13 +80,32 @@ OPENAI_API_KEY=your_key_here
 npm install
 ```
 
-4. Run the evaluation harness:
+4. Run the web app locally:
+
+```bash
+npm run dev
+```
+
+5. Run the evaluation harness:
 
 ```bash
 npm run eval
 ```
 
 This produces `eval_report.md` in the project root.
+
+## Vercel deployment
+
+This project is also ready to deploy to Vercel as a Next.js app.
+
+1. Push the repository to GitHub.
+2. Import the repo into Vercel.
+3. Add the same environment variables in the Vercel dashboard:
+   - `OPENAI_API_KEY`
+   - `OPENAI_MODEL`
+4. Deploy the project.
+
+The app uses the Next.js API route at `/api/chat` to call the structured chatbot logic.
 
 ## Notes
 
