@@ -6,8 +6,9 @@ dotenv.config();
 
 const useGoogle = Boolean(process.env.GOOGLE_API_KEY);
 const apiKey = process.env.GOOGLE_API_KEY || process.env.OPENAI_API_KEY;
-const defaultModel = useGoogle ? "gemini-2.0-flash" : "gpt-4o-mini";
-const modelName = process.env.OPENAI_MODEL || defaultModel;
+const defaultGoogleModel = process.env.GEMINI_MODEL || "gemini-2.0-flash";
+const defaultOpenAiModel = process.env.OPENAI_MODEL || "gpt-4o-mini";
+const modelName = useGoogle ? defaultGoogleModel : defaultOpenAiModel;
 
 const client = new OpenAI({
   apiKey,

@@ -39,6 +39,26 @@ This project supports the following learning evidence goals:
 - Markdown report contains a pass/fail table
 - Failure modes are documented in commentary
 
+## Decision: use a stronger model as judge
+
+The evaluation layer intentionally uses a stronger model than the base chatbot model for judging. This is a deliberate design choice to improve evaluation quality, reduce false positives on partially correct answers, and make scoring more consistent with rubric-based assessment.
+
+Why this matters:
+
+- the chatbot is optimized for generation, while the judge is optimized for evaluation
+- a stronger judge can better compare the assistant answer against the expected answer and provide grounded reasoning
+- using a separate judge improves transparency and makes the evaluation process auditable as digital evidence of learning
+
+The workflow is therefore:
+
+1. generate an answer from the chatbot
+2. validate the answer shape with Zod
+3. send the expected and actual answer to the judge model
+4. score the response on a 0–1 scale with a verdict and reason
+5. record the result in the markdown eval report
+
+This makes the assessment process more rigorous and easier to explain in educational or research settings.
+
 ## Quick start
 
 1. Copy the environment template:
