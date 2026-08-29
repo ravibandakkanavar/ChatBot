@@ -1,0 +1,12 @@
+[
+  { "id": 1, "prompt": "Summarize the plot of 'Little Red Riding Hood' in one sentence.", "expected": "A girl visits her grandmother, the wolf deceives and tries to eat them, and a woodsman rescues them." },
+  { "id": 2, "prompt": "List three causes of climate change.", "expected": "Greenhouse gas emissions from fossil fuels, deforestation, and industrial agriculture." },
+  { "id": 3, "prompt": "Convert 10 kilometers to miles.", "expected": "Approximately 6.2137 miles." },
+  { "id": 4, "prompt": "What is the capital of France?", "expected": "Paris." },
+  { "id": 5, "prompt": "Give a short definition of 'photosynthesis'.", "expected": "Photosynthesis is the process by which plants convert light energy into chemical energy (glucose) using carbon dioxide and water, releasing oxygen." },
+  { "id": 6, "prompt": "Is the statement 'The moon is made of cheese' true or false? Explain briefly.", "expected": "False — the moon is made of rock and dust." },
+  { "id": 7, "prompt": "Write a friendly two-sentence reply to a customer asking for a refund due to a defective product.", "expected": "Apologize for the defect, offer a refund or replacement, and provide steps for returning the item." },
+  { "id": 8, "prompt": "List the first three prime numbers.", "expected": "2, 3, 5." },
+  { "id": 9, "prompt": "Explain in one sentence why vaccines are important.", "expected": "Vaccines protect individuals and communities by training the immune system to recognize and fight infectious diseases, reducing illness and spread." },
+  { "id": 10, "prompt": "What does JSON stand for?", "expected": "JavaScript Object Notation." }
+]

@@ -1,0 +1,13 @@
+{
+  "name": "chatbot-w02-eval",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "eval": "node src/eval.js"
+  },
+  "dependencies": {
+    "openai": "^4.7.0",
+    "zod": "^3.22.2",
+    "dotenv": "^16.0.0"
+  }
+}
